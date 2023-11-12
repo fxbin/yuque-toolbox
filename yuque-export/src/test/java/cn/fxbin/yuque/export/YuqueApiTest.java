@@ -4,6 +4,7 @@ import cn.fxbin.yuque.export.provider.DocExportProvider;
 import cn.fxbin.yuque.sdk.YuqueApi;
 import cn.fxbin.yuque.sdk.enums.ExportDocType;
 import cn.fxbin.yuque.sdk.model.User;
+import cn.hutool.json.JSONUtil;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
@@ -30,15 +31,13 @@ public class YuqueApiTest {
     @Test
     public void getUser() {
         User user = yuqueApi.user().getData();
-        log.info("user: {}", user);
+        log.info("user: {}", JSONUtil.toJsonPrettyStr(user));
         Assertions.assertNotNull(user);
     }
 
     @Test
     public void testExportMarkdown() {
-
-        docExportProvider.export(ExportDocType.markdown, String.valueOf(19972326));
-
+        docExportProvider.export(ExportDocType.markdown, 0);
     }
 
 

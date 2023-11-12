@@ -114,6 +114,16 @@ public interface YuqueApi {
     @Delete("/repos/{id}")
     Response<RepoDetail> repoDel(@Var("id") String id);
 
+    /**
+     * 知识库目录列表
+     * <a href="https://www.yuque.com/yuque/developer/hq9l5y">Repo 目录列表</a>
+     *
+     * @param namespace 命名空间
+     * @return {@link Response}<{@link List}<{@link Toc}>>
+     */
+    @Get("/repos/{namespace}/toc")
+    Response<List<Toc>> repoToc(@Var("namespace") String namespace);
+
 
     // ======  Doc-文档  ======
 

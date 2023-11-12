@@ -4,4 +4,11 @@ server:
 spring:
   application:
     name: yuque-toolbox-export
-    
+
+knife4j:
+  enable: true
+
+yuque:
+  token: 语雀token
+  export:
+    path: 文件导出路径

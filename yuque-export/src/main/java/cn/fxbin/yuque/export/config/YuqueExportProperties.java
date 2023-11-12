@@ -1,4 +1,4 @@
-package cn.fxbin.yuque.export.properties;
+package cn.fxbin.yuque.export.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
